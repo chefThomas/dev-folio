@@ -1,18 +1,16 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
-import Home from "./Home";
-import Portfolio from "./Portfolio";
-import Resume from "./Resume";
-import Contact from "./Contact";
+import HomePage from "./HomePage";
+import ResumePage from "./ResumePage";
+import ContactPage from "./ContactPage";
 
 const Routes = () => {
   return (
     <>
-      <Route exact path='/' render={() => <Home />} />
-      <Route exact path='/portfolio' render={() => <Portfolio />} />
-      <Route exact path='/resume' render={() => <Resume />} />
-      <Route exact path='/contact' render={() => <Contact />} />
+      <Route exact path='/' render={() => <HomePage />} />
+      <Route exact path='/resume' render={() => <ResumePage />} />
+      <Route exact path='/contact' render={() => <ContactPage />} />
     </>
   );
 };

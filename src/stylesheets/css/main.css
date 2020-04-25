@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Roboto, sans-serif; }
+
+.Heading {
+  text-transform: uppercase; }
+
+.DeveloperCard {
+  width: 758px;
+  height: 248px;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  align-items: center;
+  background-image: linear-gradient(to left, #2b755d, #2f80ed); }
+
+.DeveloperCard__body {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  width: 750px;
+  height: 238px;
+  padding: 10px 10px;
+  background-image: linear-gradient(to right, #2b755d, #2f80ed); }
+  .DeveloperCard__body__text {
+    color: white; }
+
+.Header {
+  border: 2px solid green;
+  height: 30vh; }
