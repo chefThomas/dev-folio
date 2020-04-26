@@ -1,4 +1,12 @@
 .Header {
-  border: 2px solid green;
-  height: 30vh;
+  // border: 2px solid green;
+  background: $abyss-blue;
+  height: 60vh;
+  // padding: $padding-lg;
+  display: flexbox;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+  &:first-child {
+    transform: rotateY(12);
+  }
 }

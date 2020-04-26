@@ -10,3 +10,13 @@
 body {
   font-family: $primary-font;
 }
+
+button {
+  all: unset;
+  color: blue;
+  -webkit-text-fill-color: blue;
+}
+
+button:focus {
+  outline: orange 5px auto;
+}

@@ -3,19 +3,35 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <nav>
-        <NavLink className='NavBar--link' to='/'>
-          Projects
+    <nav className='NavBar'>
+      <div className='NavBar--link-container'>
+        <NavLink exact className='NavBar--link' to='/'>
+          <button className='NavBar--link-button-outer'>
+            <div className='NavBar--link-button-inner'></div>
+          </button>{" "}
+          projects
         </NavLink>
-        <NavLink className='NavBar--link' to='/resume'>
-          Resume
+      </div>
+      <div className='NavBar--link-container'>
+        <NavLink exact className='NavBar--link' to='/resume'>
+          <button className='NavBar--link-button-outer'>
+            {" "}
+            <div className='NavBar--link-button-inner'></div>
+          </button>
+          resume
         </NavLink>
-        <NavLink className='NavBar--link' to='/contact'>
-          Contact
+      </div>
+      <div className='NavBar--link-container'>
+        <NavLink exact className='NavBar--link' to='/contact'>
+          {" "}
+          <button className='NavBar--link-button-outer'>
+            {" "}
+            <div className='NavBar--link-button-inner'></div>
+          </button>
+          contact
         </NavLink>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 
