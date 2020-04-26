@@ -4,6 +4,14 @@
 body {
   font-family: Roboto, sans-serif; }
 
+button {
+  all: unset;
+  color: blue;
+  -webkit-text-fill-color: blue; }
+
+button:focus {
+  outline: orange 5px auto; }
+
 .Heading {
   text-transform: uppercase; }
 
@@ -29,5 +37,54 @@ body {
     color: white; }
 
 .Header {
-  border: 2px solid green;
-  height: 30vh; }
+  background: #31373f;
+  height: 60vh;
+  display: flexbox;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); }
+  .Header:first-child {
+    transform: rotateY(12); }
+
+.NavBar {
+  border: 1px solid red;
+  width: 20%;
+  min-width: 250px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto; }
+  .NavBar--link-container {
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .NavBar .NavBar--link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px; }
+    .NavBar .NavBar--link.active {
+      text-decoration: none;
+      color: #6fcf97; }
+  .NavBar--link.active .NavBar--link-button-outer {
+    background-color: #6fcf97;
+    background-image: none;
+    box-shadow: 0px 0px 8px 0px #6fcf97; }
+  .NavBar--link.active .NavBar--link-button-inner {
+    box-shadow: inset 3.57143px 3.57143px 5.35714px rgba(79, 98, 120, 0.3), inset 5.35714px 5.35714px 8.92857px rgba(213, 230, 245, 0.4); }
+  .NavBar--link-button-inner {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom right, #e8f0f8, #bac5d2);
+    box-shadow: 2px 1px 3px rgba(24, 55, 91, 0.2), inset -4px -3px 4px rgba(79, 98, 120, 0.2), inset 3px 3px 5px rgba(213, 230, 245, 0.4); }
+  .NavBar--link-button-outer {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    background-image: linear-gradient(to bottom right, #f8fbfd, #b4cbb2);
+    box-shadow: 2px 1px 3px rgba(24, 55, 91, 0.2), inset -4px -3px 4px rgba(79, 98, 120, 0.2), inset 3px 3px 5px rgba(213, 230, 245, 0.4); }
