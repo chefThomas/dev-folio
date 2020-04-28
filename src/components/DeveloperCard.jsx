@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheets/css/main.css";
 import me from "../static/self.png";
 
 const Developer = ({ text, image }) => (
@@ -10,7 +9,6 @@ const Developer = ({ text, image }) => (
           I’m a web developer living in Seattle. I lean toward frontend and love
           building React apps, but also enjoy diving into server-side logic.
         </p>
-        <br />
         <p>
           I am currently seeking opportunities to collaborate with and learn
           from more experienced developers while contributing to challenging and
@@ -19,8 +17,13 @@ const Developer = ({ text, image }) => (
           like saying hi.
         </p>
       </div>
-      <div>
-        <img style={{ width: "100%" }} src={me} alt='me' />
+      <div className='DeveloperCard__img-container'>
+        <img
+          className='DeveloperCard__img'
+          style={{ width: "100%" }}
+          src={me}
+          alt='me'
+        />
       </div>
     </div>
   </div>

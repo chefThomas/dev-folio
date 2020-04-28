@@ -11,6 +11,7 @@ body {
   font-family: $primary-font;
 }
 
+// reset button styling
 button {
   all: unset;
   color: blue;
@@ -19,4 +20,27 @@ button {
 
 button:focus {
   outline: orange 5px auto;
+}
+
+// font-color
+.font-white {
+  color: $white;
+}
+// box model: margin/padding/border
+.padding {
+  &-sm {
+    padding: 0.25rem;
+  }
+
+  &-md {
+    padding: 0.75rem;
+  }
+
+  &-lg {
+    padding: 1rem;
+  }
+}
+
+.full-width {
+  width: 100%;
 }
