@@ -64,11 +64,13 @@ button:focus {
   justify-content: flex-end; }
 
 .DeveloperCard {
-  width: 50%;
-  height: 15vw;
+  width: 45%;
+  min-width: 450px;
+  height: 52%;
+  min-height: 80px;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 3%;
   justify-content: center;
   border-radius: 2px;
@@ -85,11 +87,14 @@ button:focus {
   padding: 10px 10px;
   background-image: linear-gradient(to right, #2b755d, #2f4e78); }
   .DeveloperCard__body__text {
+    padding: 0 0.5rem;
     color: white;
-    font-size: 1.2vw; }
+    font-size: calc(13px + 0.16vw); }
 
-.DeveloperCard__img {
-  width: 20%; }
+.DeveloperCard__img-container {
+  max-width: 175px;
+  width: 42vw;
+  min-width: 7rem; }
 
 .GlobalNav {
   position: absolute;
@@ -188,3 +193,6 @@ button:focus {
     margin-bottom: 3px;
     background-image: linear-gradient(to bottom right, #f8fbfd, #b4cbb2);
     box-shadow: 2px 1px 3px rgba(24, 55, 91, 0.2), inset -4px -3px 4px rgba(79, 98, 120, 0.2), inset 3px 3px 5px rgba(213, 230, 245, 0.4); }
+
+.ProjectCard {
+  border: 1px solid red; }

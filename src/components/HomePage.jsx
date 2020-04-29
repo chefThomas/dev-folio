@@ -8,6 +8,48 @@ const Projects = () => {
       <Heading level={2} text='Projects' />
 
       <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </main>
   );
 };

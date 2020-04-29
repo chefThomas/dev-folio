@@ -10,11 +10,10 @@ const Developer = ({ text, image }) => (
           building React apps, but also enjoy diving into server-side logic.
         </p>
         <p>
-          I am currently seeking opportunities to collaborate with and learn
-          from more experienced developers while contributing to challenging and
-          interesting projects. Please have a look at my work and reach out if
-          you like what you see, have any constructive criticism, or just feel
-          like saying hi.
+          I'm currently seeking opportunities to collaborate and grow while
+          contributing to challenging and interesting projects. Please have a
+          look at my work and reach out if you have any questions or just feel
+          like having a chat.
         </p>
       </div>
       <div className='DeveloperCard__img-container'>

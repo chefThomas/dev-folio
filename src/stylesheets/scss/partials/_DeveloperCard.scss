@@ -1,9 +1,11 @@
 .DeveloperCard {
-  width: 50%;
-  height: 15vw;
+  width: 45%;
+  min-width: 450px;
+  height: 52%;
+  min-height: 80px;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 3%;
 
   justify-content: center;
@@ -32,13 +34,15 @@
   );
 
   &__text {
+    padding: 0 0.5rem;
     color: $white;
-    font-size: 1.2vw;
+    font-size: calc(13px + 0.16vw);
   }
 }
 
-.DeveloperCard__img {
-  // max-width: 50rem;
-  width: 20%;
-  // min-width: 5rem;
+.DeveloperCard__img-container {
+  max-width: 175px;
+  // width: auto;
+  width: 42vw;
+  min-width: 7rem;
 }
