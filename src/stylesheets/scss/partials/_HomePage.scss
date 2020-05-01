@@ -1,0 +1,5 @@
+.HomePage {
+  @include pad(0, $xxlg, $xxlg, $xxlg);
+
+  color: $dark-on-light;
+}

@@ -1,57 +1,28 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectSection from "./ProjectSection";
+
 import Heading from "./Heading";
 
-const Projects = () => {
-  return (
-    <main>
-      <Heading level={2} text='Projects' />
+import chasingEnglishMobile from "../static/chasingenglish-mobile.png";
 
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-    </main>
+import chasingEnglishTablet from "../static/chasingenglish-desktop.png";
+
+import chasingEnglish from "../static/project-descriptions/chasingEnglish.jsx";
+
+const HomePage = () => {
+  return (
+    <section className='HomePage'>
+      <Heading level={2} text='Projects' />
+      <ProjectSection
+        title='Chasing English'
+        textBody={chasingEnglish()}
+        mobileImg={chasingEnglishMobile}
+        alt1='mobile screen'
+        tabletImg={chasingEnglishTablet}
+        alt2='tablet screen'
+      />
+    </section>
   );
 };
 
-export default Projects;
+export default HomePage;

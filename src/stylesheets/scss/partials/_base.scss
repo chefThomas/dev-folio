@@ -27,17 +27,105 @@ button:focus {
   color: $white;
 }
 // box model: margin/padding/border
+.margin-none {
+  margin: 0;
+}
+.margin {
+  &-sm {
+    margin: 0.25rem;
+    &-l {
+      margin-left: 0.25rem;
+    }
+    &-r {
+      margin-right: 0.25rem;
+    }
+    &-top {
+      margin-top: 0.25rem;
+    }
+    &-bottom {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &-md {
+    margin: 0.75rem;
+    &-l {
+      margin-left: 0.75rem;
+    }
+    &-r {
+      margin-right: 0.75rem;
+    }
+    &-top {
+      margin-top: 0.75rem;
+    }
+    &-bottom {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &-lg {
+    margin: 1rem;
+    &-l {
+      margin-left: 1rem;
+    }
+    &-r {
+      margin-right: 1rem;
+    }
+    &-top {
+      margin-top: 1rem;
+    }
+    &-bottom {
+      margin-bottom: 1rem;
+    }
+  }
+}
 .padding {
   &-sm {
     padding: 0.25rem;
+    &-l {
+      padding-left: 0.25rem;
+    }
+    &-r {
+      padding-right: 0.25rem;
+    }
+    &-top {
+      padding-top: 0.25rem;
+    }
+    &-bottom {
+      padding-bottom: 0.25rem;
+    }
   }
 
   &-md {
     padding: 0.75rem;
+    &-l {
+      padding-left: 0.75rem;
+    }
+    &-r {
+      padding-right: 0.75rem;
+    }
+    &-top {
+      padding-top: 0.75rem;
+    }
+    &-bottom {
+      padding-bottom: 0.75rem;
+    }
   }
 
   &-lg {
     padding: 1rem;
+    &-l {
+      padding-left: 1rem;
+    }
+    &-r {
+      padding-right: 1rem;
+    }
+    &-top {
+      padding-top: 1rem;
+    }
+    &-bottom {
+      padding-bottom: 1rem;
+    }
   }
 }
 

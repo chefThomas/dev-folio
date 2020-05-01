@@ -15,26 +15,95 @@ button:focus {
 .font-white {
   color: white; }
 
+.margin-none {
+  margin: 0; }
+
+.margin-sm {
+  margin: 0.25rem; }
+  .margin-sm-l {
+    margin-left: 0.25rem; }
+  .margin-sm-r {
+    margin-right: 0.25rem; }
+  .margin-sm-top {
+    margin-top: 0.25rem; }
+  .margin-sm-bottom {
+    margin-bottom: 0.25rem; }
+
+.margin-md {
+  margin: 0.75rem; }
+  .margin-md-l {
+    margin-left: 0.75rem; }
+  .margin-md-r {
+    margin-right: 0.75rem; }
+  .margin-md-top {
+    margin-top: 0.75rem; }
+  .margin-md-bottom {
+    margin-bottom: 0.75rem; }
+
+.margin-lg {
+  margin: 1rem; }
+  .margin-lg-l {
+    margin-left: 1rem; }
+  .margin-lg-r {
+    margin-right: 1rem; }
+  .margin-lg-top {
+    margin-top: 1rem; }
+  .margin-lg-bottom {
+    margin-bottom: 1rem; }
+
 .padding-sm {
   padding: 0.25rem; }
+  .padding-sm-l {
+    padding-left: 0.25rem; }
+  .padding-sm-r {
+    padding-right: 0.25rem; }
+  .padding-sm-top {
+    padding-top: 0.25rem; }
+  .padding-sm-bottom {
+    padding-bottom: 0.25rem; }
 
 .padding-md {
   padding: 0.75rem; }
+  .padding-md-l {
+    padding-left: 0.75rem; }
+  .padding-md-r {
+    padding-right: 0.75rem; }
+  .padding-md-top {
+    padding-top: 0.75rem; }
+  .padding-md-bottom {
+    padding-bottom: 0.75rem; }
 
 .padding-lg {
   padding: 1rem; }
+  .padding-lg-l {
+    padding-left: 1rem; }
+  .padding-lg-r {
+    padding-right: 1rem; }
+  .padding-lg-top {
+    padding-top: 1rem; }
+  .padding-lg-bottom {
+    padding-bottom: 1rem; }
 
 .full-width {
   width: 100%; }
 
-.Heading {
-  text-transform: uppercase; }
-  .Heading--1 {
-    font-size: 1.8rem; }
-  .Heading--2 {
-    font-size: 1.5rem; }
-  .Heading--3 {
-    font-size: 1.2rem; }
+.Button {
+  text-decoration: none; }
+  .Button-sm {
+    font-size: 0.7rem;
+    padding-top: 0.25rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    border-radius: 2px; }
+  .Button-on-light-bg {
+    color: #2f3c4c;
+    border: 1px solid #2f3c4c;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s; }
+    .Button-on-light-bg:hover {
+      transform: translateY(1px);
+      box-shadow: none; }
 
 .ContainerFlex {
   display: flex; }
@@ -104,7 +173,8 @@ button:focus {
 .Header {
   background: #2f3c4c;
   height: 40vh;
-  position: relative; }
+  position: relative;
+  margin-bottom: 9rem; }
 
 .Mosaic__container {
   width: 100%;
@@ -147,6 +217,22 @@ button:focus {
     width: calc(100% / 2);
     align-self: flex-start;
     background-image: linear-gradient(to right, #2f3c4c, rgba(43, 151, 119, 0.1)); }
+
+.Heading {
+  text-transform: uppercase; }
+  .Heading--1 {
+    font-size: 1.8rem; }
+  .Heading--2 {
+    font-size: 1.5rem; }
+  .Heading--3 {
+    font-size: 1.2rem; }
+
+.HomePage {
+  padding-top: 0;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  color: #424770; }
 
 .Logo--mountains {
   width: 120px;
@@ -194,5 +280,48 @@ button:focus {
     background-image: linear-gradient(to bottom right, #f8fbfd, #b4cbb2);
     box-shadow: 2px 1px 3px rgba(24, 55, 91, 0.2), inset -4px -3px 4px rgba(79, 98, 120, 0.2), inset 3px 3px 5px rgba(213, 230, 245, 0.4); }
 
-.ProjectCard {
-  border: 1px solid red; }
+.ProjectSection {
+  padding-top: 0;
+  padding-right: 1rem;
+  padding-bottom: 0;
+  padding-left: 1rem; }
+  .ProjectSection__main {
+    display: flex;
+    justify-content: space-between; }
+
+.ProjectSection__text {
+  width: 40%;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 24px; }
+
+.ProjectSection___screenshots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%; }
+  .ProjectSection___screenshots-container:hover .screenshot-mobile {
+    transform: none; }
+  .ProjectSection___screenshots-container:hover .screenshot-tablet {
+    transform: rotate3d(0, 0, 0, 0deg) translate(5%); }
+
+.screenshot-mobile-container {
+  z-index: 4000;
+  perspective: 1500px;
+  width: 15%; }
+  .screenshot-mobile-container .screenshot-mobile {
+    transition: all 0.5s ease;
+    transform: translate(140%) rotate3d(0, 1, 0, -45deg);
+    width: 100%;
+    display: inline-block;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5), 22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6); }
+
+.screenshot-tablet-container {
+  perspective: 2000px;
+  width: 70%; }
+  .screenshot-tablet-container .screenshot-tablet {
+    transition: all 0.5s ease;
+    transform: rotate3d(0, 1, 0, -35deg);
+    display: inline-block;
+    width: 100%;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5), 22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6); }

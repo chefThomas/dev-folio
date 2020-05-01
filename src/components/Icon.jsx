@@ -1,7 +1,7 @@
 import React from "react";
 
-const Icon = ({ src, alt, className }) => (
-  <img src={src} alt={alt} className={className} />
+const Icon = ({ src, alt, styles }) => (
+  <img src={src} alt={alt} className={`Icon ${styles}`} />
 );
 
 export default Icon;

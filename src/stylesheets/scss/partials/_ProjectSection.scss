@@ -1,0 +1,60 @@
+.ProjectSection {
+  @include pad($pr: 1rem, $pl: 1rem);
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.ProjectSection__text {
+  // border: 1px solid blue;
+  width: 40%;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+.ProjectSection___screenshots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  &:hover .screenshot-mobile {
+    transform: none;
+  }
+
+  &:hover .screenshot-tablet {
+    transform: rotate3d(0, 0, 0, 0deg) translate(5%);
+  }
+}
+
+.screenshot-mobile-container {
+  z-index: 4000;
+  perspective: 1500px;
+  width: 15%;
+  // border: 1px solid red;
+  .screenshot-mobile {
+    transition: all 0.5s ease;
+    transform: translate(140%) rotate3d(0, 1, 0, -45deg);
+    width: 100%;
+    display: inline-block;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5),
+      22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.screenshot-tablet-container {
+  perspective: 2000px;
+  width: 70%;
+  // border: 1px solid pink;
+
+  .screenshot-tablet {
+    transition: all 0.5s ease;
+
+    transform: rotate3d(0, 1, 0, -35deg);
+    display: inline-block;
+    width: 100%;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5),
+      22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+}

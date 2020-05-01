@@ -2,6 +2,8 @@ import React from "react";
 
 import DeveloperCard from "./DeveloperCard";
 
+import "../stylesheets/css/main.css";
+
 const Header = (props) => (
   <>
     <header className={`Header ${props.styles}`}>

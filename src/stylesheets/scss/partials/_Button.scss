@@ -1,0 +1,22 @@
+.Button {
+  text-decoration: none;
+  &-sm {
+    font-size: 0.7rem;
+    @include pad($sm, $md, $sm, $md);
+    border-radius: 2px;
+  }
+
+  &-on-light-bg {
+    color: $abyss-blue;
+    border: 1px solid $abyss-blue;
+    box-shadow: $box-shadow;
+    transition: all 0.4s;
+    &:hover {
+      transform: translateY(1px);
+      box-shadow: none;
+      //   color: $white;
+      //   background-color: $abyss-blue;
+      //   border: 1px solid $abyss-blue;
+    }
+  }
+}
