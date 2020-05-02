@@ -104,6 +104,8 @@ button:focus {
     .Button-on-light-bg:hover {
       transform: translateY(1px);
       box-shadow: none; }
+    .Button-on-light-bg:active {
+      background-color: rgba(111, 207, 151, 0.4); }
 
 .ContainerFlex {
   display: flex; }
