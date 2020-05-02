@@ -105,7 +105,7 @@ button:focus {
       transform: translateY(1px);
       box-shadow: none; }
     .Button-on-light-bg:active {
-      background-color: rgba(111, 207, 151, 0.4); }
+      box-shadow: inset; }
 
 .ContainerFlex {
   display: flex; }
@@ -235,6 +235,13 @@ button:focus {
   padding-bottom: 2rem;
   padding-left: 2rem;
   color: #424770; }
+
+.Icon {
+  width: 90px; }
+  .Icon--svg-link {
+    transition: all 0.3s; }
+    .Icon--svg-link:hover * {
+      fill: #2f80ed; }
 
 .Logo--mountains {
   width: 120px;

@@ -14,12 +14,13 @@
     &:hover {
       transform: translateY(1px);
       box-shadow: none;
+
       //   color: $white;
       //   background-color: $abyss-blue;
       //   border: 1px solid $abyss-blue;
     }
     &:active {
-      background-color: rgba(111, 207, 151, 0.4);
+      box-shadow: inset;
     }
   }
 }

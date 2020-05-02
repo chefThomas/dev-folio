@@ -2,6 +2,9 @@ import React from "react";
 import Heading from "./Heading";
 import ContainerFlex from "./ContainerFlex";
 import Button from "./Button";
+import Icon from "./Icon";
+
+import { github } from "../static/svgs/svg-depot";
 
 const ProjectSection = (props) => (
   <article className={`ProjectSection ${props.styles}`}>
@@ -11,7 +14,14 @@ const ProjectSection = (props) => (
         type='link'
         label='Live Site'
         url='https://www.chasingenglish.com'
-        styles='Button-sm Button-on-light-bg'
+        styles='Button-sm Button-on-light-bg margin-lg-r'
+      />
+      <Icon
+        type='svg-link'
+        svg={github}
+        url='https://github.com/chefThomas/chasing-english'
+        alt='github icon'
+        inline={{ width: "30px", position: "absolute", bottom: "-15px" }}
       />
     </ContainerFlex>
     <section className='ProjectSection__main'>

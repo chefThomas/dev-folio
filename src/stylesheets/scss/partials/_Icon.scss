@@ -1,0 +1,9 @@
+.Icon {
+  width: 90px;
+  &--svg-link {
+    transition: all 0.3s;
+    &:hover * {
+      fill: $link-blue;
+    }
+  }
+}
