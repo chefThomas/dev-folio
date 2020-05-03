@@ -15,4 +15,34 @@ const github = (
   </svg>
 );
 
-export { github };
+const scrollUp = (
+  <svg
+    width='12'
+    height='21'
+    viewBox='0 0 24 21'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      d='M10.268 0.999998C11.0378 -0.333335 12.9623 -0.333333 13.7321 1L23.2583 17.5C24.0281 18.8333 23.0659 20.5 21.5263 20.5H2.47372C0.934118 20.5 -0.0281307 18.8333 0.74167 17.5L10.268 0.999998Z'
+      fill='#2f80ed'
+    />
+  </svg>
+);
+
+const scrollDown = (
+  <svg
+    width='12'
+    height='21'
+    viewBox='0 0 24 21'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      d='M10.268 20C11.0378 21.3333 12.9623 21.3333 13.7321 20L23.2583 3.5C24.0281 2.16667 23.0659 0.5 21.5263 0.5H2.47372C0.934118 0.5 -0.0281307 2.16667 0.74167 3.5L10.268 20Z'
+      fill='#2f80ed'
+    />
+  </svg>
+);
+
+export { github, scrollUp, scrollDown };

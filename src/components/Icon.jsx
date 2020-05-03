@@ -1,6 +1,6 @@
 import React from "react";
 
-const Icon = ({ type, url, svg, src, alt, styles }) => {
+const Icon = ({ type, url, svg, src, alt, style }) => {
   return type === "svg" ? (
     <div className='Icon--svg'>{svg}</div>
   ) : type === "svg-link" ? (
@@ -14,7 +14,7 @@ const Icon = ({ type, url, svg, src, alt, styles }) => {
       {svg}
     </a>
   ) : (
-    <img className='Icon' style={styles} src={src} alt={alt} />
+    <img className='Icon' style={style} src={src} alt={alt} />
   );
 };
 

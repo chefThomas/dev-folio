@@ -24,7 +24,6 @@ const GlobalNav = (prop) => {
             styles='font-white'
           />
         </ContainerFlex>
-
         <NavBar />
       </ContainerFlex>
     </div>
