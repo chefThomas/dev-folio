@@ -22,12 +22,12 @@ const chasingEnglish = () => (
     <Heading level={4}>Ecommerce</Heading>
     <p>
       I suggested an upfront online payment system so my client could avoid
-      stressful delinquent payment conversations which had been a pain point in
-      a previous freelance role. I chose Stripe because its service works by
-      redirecting users to their servers This allowed me to avoid getting in
-      over my head on security concerns. I was confident in Stripe’s security
-      because they have a massive customer base containing some very well-known
-      ecommerce sites.
+      delinquent payment conversations which had been a pain point in a previous
+      freelance role. I chose Stripe because its service works by redirecting
+      users to their servers, which allowed me to avoid getting in over my head
+      on security concerns. I was confident in Stripe’s security because they
+      have a massive customer base containing some very well-known ecommerce
+      sites.
     </p>
 
     <Heading level={4}>UX and Styling</Heading>

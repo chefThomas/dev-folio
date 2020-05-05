@@ -302,7 +302,8 @@ button:focus {
   padding-top: 0;
   padding-right: 1rem;
   padding-bottom: 0;
-  padding-left: 1rem; }
+  padding-left: 1rem;
+  margin-bottom: 7rem; }
   .ProjectSection__main {
     display: flex;
     justify-content: space-between;
@@ -315,44 +316,51 @@ button:focus {
       left: 0; }
 
 .textScroller {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   overflow: hidden;
   position: relative;
-  width: 40%;
-  height: 250px; }
-  .textScroller--scroll-control {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    bottom: 50%;
-    transform: translate(0, 50%);
-    right: 0; }
+  width: 45%;
+  height: 300px;
+  overflow-y: scroll;
+  scrollbar-width: 1;
+  /* Firefox */ }
   .textScroller--top-blind {
-    position: absolute;
+    position: sticky;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
     width: 100%;
     top: 0;
     height: 12%; }
-    .textScroller--top-blind--scrolling {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      height: 12%;
-      background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.5)); }
   .textScroller--bottom-blind {
-    position: absolute;
-    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.1));
+    position: sticky;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3));
     width: 100%;
-    bottom: 0;
-    height: 20%; }
+    bottom: -1px;
+    height: 14%; }
+  .textScroller::-webkit-scrollbar {
+    background-color: white;
+    width: 5px;
+    border-radius: 10px;
+    height: 80%; }
+  .textScroller::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px; }
+  .textScroller:hover::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 5px;
+    border-radius: 20px;
+    height: 80%; }
+  .textScroller:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(47, 128, 237, 0.3);
+    border-radius: 20px; }
+    .textScroller:hover::-webkit-scrollbar-thumb:hover {
+      background-color: #2f80ed; }
 
 .ProjectSection__text {
-  position: absolute;
-  top: 0;
   width: 100%;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
-  line-height: 24px;
-  z-index: -2000; }
+  line-height: 24px; }
 
 .ProjectSection___screenshots-container {
   display: flex;
