@@ -1,0 +1,16 @@
+.Icon {
+  width: 90px;
+  &--svg {
+    fill-opacity: 0.3;
+    &:hover * {
+      fill-opacity: 8;
+      width: 12;
+    }
+  }
+  &--svg-link {
+    transition: all 0.3s;
+    &:hover * {
+      fill: $link-blue;
+    }
+  }
+}

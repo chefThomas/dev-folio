@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <GlobalNav />
-      <Header />
+      <Header styles='margin-lg-bottom' />
       <Switch>
         <Routes />
       </Switch>

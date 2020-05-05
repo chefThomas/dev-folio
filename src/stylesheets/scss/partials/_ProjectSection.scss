@@ -1,0 +1,136 @@
+.ProjectSection {
+  @include pad($pr: 1rem, $pl: 1rem);
+  margin-bottom: $section-margin-bottom;
+
+  &__main {
+    // border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &--scroll-control {
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid red;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.textScroller {
+  padding-left: $padding-sm;
+  padding-right: $padding-sm;
+  overflow: hidden;
+  position: relative;
+  width: 45%;
+  height: 300px;
+
+  &--top-blind {
+    position: sticky;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.3)
+    );
+    width: 100%;
+    top: 0;
+    height: 12%;
+    // border: 1px solid green;
+  }
+
+  &--bottom-blind {
+    position: sticky;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.3)
+    );
+    width: 100%;
+    bottom: -1px;
+    height: 14%;
+  }
+  // remove scrollbar
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    background-color: $white;
+    width: 5px;
+    border-radius: 10px;
+    height: 80%;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $white;
+    border-radius: 20px;
+  }
+
+  &:hover::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 5px;
+    border-radius: 20px;
+    height: 80%;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(47, 128, 237, 0.3);
+    border-radius: 20px;
+    &:hover {
+      background-color: $link-blue;
+    }
+  }
+
+  scrollbar-width: 1; /* Firefox */
+}
+.ProjectSection__text {
+  width: 100%;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+.ProjectSection___screenshots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  &:hover .screenshot-mobile {
+    transform: none;
+  }
+
+  &:hover .screenshot-tablet {
+    transform: rotate3d(0, 0, 0, 0deg) translate(5%);
+  }
+}
+
+.screenshot-mobile-container {
+  z-index: 4000;
+  perspective: 1500px;
+  width: 15%;
+  .screenshot-mobile {
+    transition: all 0.5s ease;
+    transform: translate(140%) rotate3d(0, 1, 0, -45deg);
+    width: 100%;
+    display: inline-block;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5),
+      22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.screenshot-tablet-container {
+  perspective: 2000px;
+  width: 70%;
+  // border: 1px solid pink;
+
+  .screenshot-tablet {
+    transition: all 0.5s ease;
+
+    transform: rotate3d(0, 1, 0, -35deg);
+    display: inline-block;
+    width: 100%;
+    box-shadow: 37.2px 62.5px 125px -25px rgba(50, 50, 93, 0.5),
+      22.3px 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  }
+}
