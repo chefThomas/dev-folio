@@ -92,25 +92,63 @@
 }
 
 .ProjectSection___screenshots-container {
+  // border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60%;
   &:hover .screenshot-mobile {
     transform: none;
+    opacity: 1;
   }
 
   &:hover .screenshot-tablet {
     transform: rotate3d(0, 0, 0, 0deg) translate(5%);
+    opacity: 1;
+  }
+
+  &:hover .floating-icon-container {
+    // border: 1px solid red;
+    transform: translate(12%, -14vw);
+    opacity: 1;
+    @media screen and (min-width: 1250px) {
+      transform: translate(12%, -185px);
+    }
+  }
+}
+
+.floating-icon-container {
+  transform: translate(12%, 0);
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  // border: 1px solid red;
+
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: absolute;
+
+  .icon-container {
+    // border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    height: 2vw;
+    max-height: 20px;
+    @include mar(
+      $mt: 0,
+      $mr: calc(5px + 0.2vw),
+      $mb: 0,
+      $ml: calc(5px + 0.2vw)
+    );
   }
 }
 
 .screenshot-mobile-container {
-  z-index: 4000;
   perspective: 1500px;
   width: 15%;
   .screenshot-mobile {
     transition: all 0.5s ease;
+    opacity: 0;
     transform: translate(140%) rotate3d(0, 1, 0, -45deg);
     width: 100%;
     display: inline-block;
@@ -126,7 +164,6 @@
 
   .screenshot-tablet {
     transition: all 0.5s ease;
-
     transform: rotate3d(0, 1, 0, -35deg);
     display: inline-block;
     width: 100%;

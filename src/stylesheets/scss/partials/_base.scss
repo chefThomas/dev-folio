@@ -9,6 +9,10 @@
 
 body {
   font-family: $primary-font;
+  max-width: 1300px;
+  box-shadow: $box-shadow;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // reset button styling
