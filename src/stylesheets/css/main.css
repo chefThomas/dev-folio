@@ -2,7 +2,11 @@
   box-sizing: border-box; }
 
 body {
-  font-family: Roboto, sans-serif; }
+  font-family: Roboto, sans-serif;
+  max-width: 1300px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto; }
 
 button {
   all: unset;
@@ -170,7 +174,8 @@ button:focus {
 .GlobalNav {
   position: absolute;
   z-index: 9000;
-  width: 100%; }
+  width: 100%;
+  max-width: 1300px; }
 
 .Header {
   background: #2f3c4c;
@@ -241,16 +246,10 @@ button:focus {
   color: #424770; }
 
 .Icon {
-  width: 90px; }
-  .Icon--svg {
-    fill-opacity: 0.3; }
-    .Icon--svg:hover * {
-      fill-opacity: 8;
-      width: 12; }
-  .Icon--svg-link {
-    transition: all 0.3s; }
-    .Icon--svg-link:hover * {
-      fill: #2f80ed; }
+  height: 100%;
+  width: auto; }
+  .Icon--svg-link:hover * {
+    fill: #2f80ed; }
 
 .Logo--mountains {
   width: 120px;
@@ -368,16 +367,42 @@ button:focus {
   align-items: center;
   width: 60%; }
   .ProjectSection___screenshots-container:hover .screenshot-mobile {
-    transform: none; }
+    transform: none;
+    opacity: 1; }
   .ProjectSection___screenshots-container:hover .screenshot-tablet {
-    transform: rotate3d(0, 0, 0, 0deg) translate(5%); }
+    transform: rotate3d(0, 0, 0, 0deg) translate(5%);
+    opacity: 1; }
+  .ProjectSection___screenshots-container:hover .floating-icon-container {
+    transform: translate(12%, -14vw);
+    opacity: 1; }
+    @media screen and (min-width: 1250px) {
+      .ProjectSection___screenshots-container:hover .floating-icon-container {
+        transform: translate(12%, -185px); } }
+
+.floating-icon-container {
+  transform: translate(12%, 0);
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  position: absolute; }
+  .floating-icon-container .icon-container {
+    display: flex;
+    align-items: center;
+    height: 2vw;
+    max-height: 20px;
+    margin-top: 0;
+    margin-right: calc(5px + 0.2vw);
+    margin-bottom: 0;
+    margin-left: calc(5px + 0.2vw); }
 
 .screenshot-mobile-container {
-  z-index: 4000;
   perspective: 1500px;
   width: 15%; }
   .screenshot-mobile-container .screenshot-mobile {
     transition: all 0.5s ease;
+    opacity: 0;
     transform: translate(140%) rotate3d(0, 1, 0, -45deg);
     width: 100%;
     display: inline-block;

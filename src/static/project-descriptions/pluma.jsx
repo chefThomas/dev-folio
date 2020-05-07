@@ -13,7 +13,7 @@ const pluma = () => (
       eBird:
       <ul>
         <li>
-          <b>Maps</b> to display geospatical data.
+          <b>Maps</b> to display geospatial data.
         </li>
         <li>
           <b>Geocoding</b> to convert users' verbal locations to geocoordinates.
@@ -25,8 +25,7 @@ const pluma = () => (
       </ul>
       As a former field biologist, perennial bird enthusiast, and current web
       developer, building Pluma was really, really fun because it combined
-      multiple disciplines of interest to me, and is something I use on a
-      regular basis before heading out with my binoculars.
+      multiple disciplines of interest to me.
     </p>
   </div>
 );

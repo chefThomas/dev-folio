@@ -7,6 +7,13 @@ import Icon from "./Icon";
 import { github } from "../static/svgs/svg-depot";
 
 const ProjectSection = (props) => {
+  const generateStackIcons = () =>
+    props.stackIcons.map((img) => (
+      <div className='icon-container'>
+        <Icon src={img} />
+      </div>
+    ));
+
   return (
     <article className={`ProjectSection ${props.styles}`}>
       <ContainerFlex flexProps='align-items-center'>
@@ -33,6 +40,7 @@ const ProjectSection = (props) => {
         </div>
 
         <div className='ProjectSection___screenshots-container'>
+          <div className='floating-icon-container'>{generateStackIcons()}</div>
           <div className='screenshot-mobile-container'>
             <img
               className='screenshot-mobile'

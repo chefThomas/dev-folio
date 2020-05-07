@@ -16,7 +16,11 @@ const GlobalNav = (prop) => {
         styles='padding-md'
       >
         <ContainerFlex flexProps='align-items-center'>
-          <Icon src={mountains} alt='mountains logo' />
+          <Icon
+            src={mountains}
+            styles={{ width: "90px" }}
+            alt='mountains logo'
+          />
           <Heading
             level={1}
             text={"Tom Dixon"}
