@@ -2,6 +2,7 @@ import React from "react";
 import ProjectSection from "./ProjectSection";
 
 import Heading from "./Heading";
+import Footer from "./Footer";
 
 // static imports
 //images
@@ -61,6 +62,7 @@ const HomePage = () => {
         liveSiteUrl='https://chefthomas.github.io/pluma/'
         repoUrl='https://github.com/chefThomas/pluma'
       />
+      <Footer />
     </section>
   );
 };

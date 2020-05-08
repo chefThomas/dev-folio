@@ -3,9 +3,9 @@ import Heading from "./Heading";
 
 const ContactPage = () => {
   return (
-    <main>
+    <section className='Page'>
       <Heading level={1} text='Contact' />
-    </main>
+    </section>
   );
 };
 
