@@ -1,8 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import Routes from "./components/Routes";
-
+import HomePage from "./components/HomePage";
+import ResumePage from "./components/ResumePage";
+import ContactPage from "./components/ContactPage";
 import GlobalNav from "./components/GlobalNav";
 
 import Header from "./components/Header";
@@ -12,14 +14,25 @@ import "../src/stylesheets/css/main.css";
 
 function App() {
   return (
-    <Router>
+    <>
       <GlobalNav />
       <Header styles='margin-lg-bottom' />
-      <Switch>
-        <Routes />
-      </Switch>
-      <Footer />
-    </Router>
+      <Route
+        render={({ location }) => (
+          <>
+            <TransitionGroup>
+              <CSSTransition key={location.key} classNames='fade' timeout={500}>
+                <Switch location={location}>
+                  <Route exact path='/' render={() => <HomePage />} />
+                  <Route exact path='/resume' render={() => <ResumePage />} />
+                  <Route exact path='/contact' render={() => <ContactPage />} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          </>
+        )}
+      />
+    </>
   );
 }
 
