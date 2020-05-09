@@ -1,0 +1,11 @@
+.Page {
+  @include pad(0, $xxlg, $xxlg, $xxlg);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding-top: 30vh;
+  color: $dark-on-light;
+  box-shadow: $box-shadow;
+  margin-left: auto;
+  margin-right: auto;
+}

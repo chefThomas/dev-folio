@@ -1,10 +1,10 @@
 import React from "react";
-import ProjectSection from "./ProjectSection";
 
+import ProjectSection from "./ProjectSection";
 import Heading from "./Heading";
 import Footer from "./Footer";
+import Page from "./Page";
 
-// static imports
 //images
 import chasingEnglishMobile from "../static/chasingenglish-mobile.png";
 import chasingEnglishTablet from "../static/chasingenglish-desktop.png";
@@ -25,9 +25,9 @@ import iconStripe from "../static/logos_stripe.png";
 import chasingEnglish from "../static/project-descriptions/chasingEnglish.jsx";
 import pluma from "../static/project-descriptions/pluma.jsx";
 
-const HomePage = () => {
+const ProjectsPage = () => {
   return (
-    <section className='HomePage'>
+    <Page>
       <Heading level={2} text='Projects' />
       <ProjectSection
         stackIcons={[
@@ -63,8 +63,8 @@ const HomePage = () => {
         repoUrl='https://github.com/chefThomas/pluma'
       />
       <Footer />
-    </section>
+    </Page>
   );
 };
 
-export default HomePage;
+export default ProjectsPage;

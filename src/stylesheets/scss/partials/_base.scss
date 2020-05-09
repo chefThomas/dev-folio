@@ -133,6 +133,7 @@ button:focus {
   }
 }
 
+// page transitions
 .full-width {
   width: 100%;
 }
@@ -150,4 +151,8 @@ button:focus {
 .fade-exit-active {
   opacity: 0;
   transition: opacity 500ms;
+}
+
+#root {
+  position: relative;
 }

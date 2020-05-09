@@ -1,11 +1,14 @@
 import React from "react";
+import Footer from "./Footer";
 import Heading from "./Heading";
+import Page from "./Page";
 
 const ContactPage = () => {
   return (
-    <section className='Page'>
-      <Heading level={1} text='Contact' />
-    </section>
+    <Page className='Page'>
+      <Heading level={2} text='Contact' />
+      <Footer />
+    </Page>
   );
 };
 

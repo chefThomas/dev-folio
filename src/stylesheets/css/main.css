@@ -105,6 +105,9 @@ button:focus {
   opacity: 0;
   transition: opacity 500ms; }
 
+#root {
+  position: relative; }
+
 .Button {
   text-decoration: none; }
   .Button-sm {
@@ -252,13 +255,19 @@ button:focus {
     font-weight: normal;
     margin-bottom: 0; }
 
-.HomePage {
+.Page {
   padding-top: 0;
   padding-right: 2rem;
   padding-bottom: 2rem;
   padding-left: 2rem;
   position: absolute;
-  color: #424770; }
+  top: 50%;
+  width: 100%;
+  padding-top: 30vh;
+  color: #424770;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-left: auto;
+  margin-right: auto; }
 
 .Icon {
   height: 100%;
