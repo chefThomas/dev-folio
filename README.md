@@ -1,1 +1,1 @@
-[Live site](https://chefthomas.github.io/)
+[Live site](https://chefthomas.github.io/dev-folio/)
