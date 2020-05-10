@@ -23,6 +23,7 @@ function App() {
                 <Route exact path='/' render={() => <ProjectsPage />} />
                 <Route exact path='/resume' render={() => <ResumePage />} />
                 <Route exact path='/contact' render={() => <ContactPage />} />
+                <Route path='*' render={() => <ProjectsPage />} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
