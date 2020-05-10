@@ -17,6 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://noxid-portfolio",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "style": "node-sass --watch src/stylesheets/scss/ -o src/stylesheets/css/"
