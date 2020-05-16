@@ -62,6 +62,7 @@ const ProjectsPage = () => {
         liveSiteUrl='https://chefthomas.github.io/pluma/'
         repoUrl='https://github.com/chefThomas/pluma'
       />
+
       <Footer />
     </Page>
   );

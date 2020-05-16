@@ -13,9 +13,10 @@ html {
 body {
   font-family: Roboto, sans-serif;
   max-width: 1300px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 0; }
 
 button {
   all: unset;
@@ -133,7 +134,7 @@ button:focus {
   .Button-on-light-bg {
     color: #2f3c4c;
     border: 1px solid #2f3c4c;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     transition: all 0.4s; }
     .Button-on-light-bg:hover {
       transform: translateY(1px);
@@ -211,7 +212,12 @@ button:focus {
     font-size: calc(13px + 0.16vw); }
 
 .Footer {
-  border: 1px solid red; }
+  position: absolute;
+  bottom: -12%;
+  left: -3px;
+  width: calc(100% + 5px);
+  height: 300px;
+  background-image: url("../../static/svgs/bottom.svg"); }
 
 .GlobalNav {
   position: absolute;
@@ -290,9 +296,22 @@ button:focus {
   width: 100%;
   padding-top: 30vh;
   color: #424770;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-left: auto;
   margin-right: auto; }
+  .Page__left-shadow {
+    position: absolute;
+    bottom: -10%;
+    left: 2px;
+    height: 98%;
+    width: 1px;
+    box-shadow: -2px 0 3px 1px rgba(0, 0, 0, 0.25); }
+  .Page__right-shadow {
+    position: absolute;
+    right: 2px;
+    bottom: -10%;
+    height: 100%;
+    width: 1px;
+    box-shadow: 2px 0 3px 1px rgba(0, 0, 0, 0.25); }
 
 .Icon {
   height: 100%;
