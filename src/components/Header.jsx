@@ -16,7 +16,7 @@ const Header = (props) => (
           <span className='Header__mosaic__4'></span>
         </div>
       </div>
-      <DeveloperCard styles='' />
+      <DeveloperCard style='' />
     </header>
   </>
 );

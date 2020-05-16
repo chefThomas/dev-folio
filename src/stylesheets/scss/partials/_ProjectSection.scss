@@ -11,13 +11,14 @@
     @media screen and (max-width: 900px) {
       flex-direction: column;
       flex-flow: column-reverse;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
 .textScroller {
   padding-left: $padding-sm;
   padding-right: $padding-sm;
-  overflow: hidden;
   position: relative;
   width: 45%;
   height: 300px;
@@ -120,7 +121,7 @@
       transform: translate(12%, -185px);
     }
     @media screen and (max-width: 900px) {
-      transform: translate(12%, -18vw);
+      transform: translate(0, -18vw);
     }
   }
 }
@@ -134,7 +135,7 @@
 
   @media screen and (max-width: 900px) {
     opacity: 1;
-    transform: translate(12%, -18vw);
+    transform: translate(0, -18vw);
   }
 
   opacity: 0;
@@ -147,6 +148,7 @@
     align-items: center;
     height: 2vw;
     max-height: 20px;
+    min-height: 15px;
     @include mar(
       $mt: 0,
       $mr: calc(5px + 0.2vw),
