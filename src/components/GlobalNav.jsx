@@ -25,7 +25,7 @@ const GlobalNav = (prop) => {
             level={1}
             text={"Tom Dixon"}
             className='Heading--name'
-            styles='font-white'
+            styles='font-white hide-sm'
           />
         </ContainerFlex>
         <NavBar />

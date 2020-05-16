@@ -1,48 +1,44 @@
 .DeveloperCard {
-  width: 45%;
-  min-width: 450px;
-  height: 52%;
-  min-height: 80px;
+  max-width: 430px;
+  max-height: 180px;
   display: flex;
-  position: absolute;
-  top: 40%;
-  right: 3%;
-
   justify-content: center;
-  border-radius: 2px;
   align-items: center;
+  position: absolute;
+  top: 150px;
+  right: 3%;
+  margin-left: auto;
+  border: 4px solid #6fcf97;
+  border-radius: 2px;
   background-image: linear-gradient(
     to left,
     rgb(43, 117, 93),
     rgb(47, 128, 237)
   );
-}
 
-.DeveloperCard__body {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  border-radius: 2px;
-  //   width: 50vw;
-  width: 99%;
-  height: 96%;
-  padding: 10px 10px;
-  background-image: linear-gradient(
-    to right,
-    rgb(43, 117, 93),
-    rgb(47, 78, 120)
-  );
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+  @media screen and (max-width: 495px) {
+    // display: none;
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  &__img-container {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+    width: 42vw;
+    min-width: 7rem;
+    margin-right: 5px;
+
+    @media screen and (max-width: 470px) {
+      display: none;
+    }
+  }
 
   &__text {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
     color: $white;
     font-size: calc(13px + 0.16vw);
   }
-}
-
-.DeveloperCard__img-container {
-  max-width: 175px;
-  // width: auto;
-  width: 42vw;
-  min-width: 7rem;
 }
