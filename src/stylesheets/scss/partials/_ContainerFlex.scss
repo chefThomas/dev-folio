@@ -34,8 +34,15 @@
   justify-content: flex-end;
 }
 
+// responsive rules
+@media screen and (max-width: 400px) {
+  .justify-content-center-sm {
+    justify-content: center;
+  }
+}
+
 @media screen and (max-width: 900px) {
-  .horizontal-center-md {
+  .justify-content-center-md {
     justify-content: center;
   }
 }

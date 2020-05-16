@@ -16,7 +16,7 @@ const ProjectSection = (props) => {
 
   return (
     <article className={`ProjectSection ${props.styles}`}>
-      <ContainerFlex flexProps='align-items-center horizontal-center-md'>
+      <ContainerFlex flexProps='align-items-center justify-content-center-sm'>
         <Heading level={3} text={props.title} styles='margin-lg-r' />
         <Button
           type='link'
