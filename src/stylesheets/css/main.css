@@ -142,6 +142,12 @@ button:focus {
     .Button-on-light-bg:active {
       box-shadow: inset; }
 
+.ContactForm {
+  width: 60%;
+  height: 440px;
+  background: #6fcf97;
+  margin-bottom: 20rem; }
+
 .ContainerFlex {
   display: flex; }
 
