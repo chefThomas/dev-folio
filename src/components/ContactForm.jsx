@@ -52,39 +52,61 @@ const ContactForm = () => {
   return (
     // <div className='ContactForm'>
     <form className='ContactForm'>
-      <div className='ContactForm__col1'>
-        <ThemeProvider theme={theme}>
+      <div className='ContactForm__fields-container'>
+        <div className='ContactForm__field-group-1'>
+          <ThemeProvider theme={theme}>
+            <TextField
+              required
+              style={Styles.form.textfield}
+              size='small'
+              value={name}
+              onChange={handleNameChange}
+              variant='outlined'
+              label='Name'
+              // color='primary'
+              error={emailError || null}
+              helperText={emailError ? "Invalid email" : ""}
+            />
+            <TextField
+              style={Styles.form.textfield}
+              size='small'
+              value={company}
+              onChange={handleCompanyChange}
+              variant='outlined'
+              label='Company'
+            />
+            <TextField
+              required
+              style={Styles.form.textfield}
+              size='small'
+              value={email}
+              onChange={handleEmailChange}
+              variant='outlined'
+              label='Email'
+              color='primary'
+              error={emailError || null}
+              helperText={emailError ? "Invalid email" : ""}
+            />
+          </ThemeProvider>
+        </div>
+        <div className='ContactForm__field-group-2'>
           <TextField
-            style={Styles.form.textfield}
-            size='small'
-            value={name}
-            onChange={handleNameChange}
+            required
             variant='outlined'
-            label='Name'
-            // color='primary'
-            error={emailError || null}
-            helperText={emailError ? "Invalid email" : ""}
-          />
-          <TextField
-            style={Styles.form.textfield}
             size='small'
-            value={company}
-            onChange={handleCompanyChange}
-            variant='outlined'
-            label='Company'
-          />
-          <TextField
-            style={Styles.form.textfield}
-            size='small'
-            value={email}
-            onChange={handleEmailChange}
-            variant='outlined'
-            label='Email'
+            style={{ ...Styles.form.textfield, width: "100%" }}
+            value={message}
+            label='Message'
             color='primary'
-            error={emailError || null}
-            helperText={emailError ? "Invalid email" : ""}
+            error={messageError || null}
+            helperText={messageError ? "Don't be shy" : ""}
+            multiline
+            rows={9}
           />
-        </ThemeProvider>
+        </div>
+      </div>
+
+      <div className='ContactForm__button-container'>
         <Button
           style={{ ...Styles.button.primary, marginBottom: "2rem" }}
           onClick={handleSubmit}
@@ -92,22 +114,7 @@ const ContactForm = () => {
           SEND
         </Button>
       </div>
-      <div className='ContactForm__col2'>
-        <TextField
-          variant='outlined'
-          size='small'
-          style={{ ...Styles.form.textfield, width: "100%" }}
-          value={message}
-          label='Message'
-          color='primary'
-          error={messageError || null}
-          helperText={messageError ? "Don't be shy" : ""}
-          multiline
-          rows={9}
-        />
-      </div>
     </form>
-    // </div>
   );
 };
 
