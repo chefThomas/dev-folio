@@ -38,6 +38,11 @@ button:focus {
   outline: orange 5px auto;
 }
 
+.flex-h-center {
+  position: flex;
+  justify-content: center;
+}
+
 // font-color
 .font-white {
   color: $white;
@@ -142,6 +147,10 @@ button:focus {
     &-bottom {
       padding-bottom: 1rem;
     }
+  }
+
+  &-xlg {
+    padding: 3rem;
   }
 }
 
