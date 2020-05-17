@@ -11,9 +11,9 @@ html {
       font-size: 12px; } }
 
 body {
-  font-family: Roboto, sans-serif;
+  font-family: "Open Sans", sans-serif;
   max-width: 1300px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   margin-left: auto;
   margin-right: auto;
   margin-top: 0; }
@@ -25,6 +25,10 @@ button {
 
 button:focus {
   outline: orange 5px auto; }
+
+.flex-h-center {
+  position: flex;
+  justify-content: center; }
 
 .font-white {
   color: white; }
@@ -98,6 +102,9 @@ button:focus {
   .padding-lg-bottom {
     padding-bottom: 1rem; }
 
+.padding-xlg {
+  padding: 3rem; }
+
 @media screen and (max-width: 400px) {
   .hide-sm {
     display: none; } }
@@ -134,7 +141,7 @@ button:focus {
   .Button-on-light-bg {
     color: #2f3c4c;
     border: 1px solid #2f3c4c;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
     transition: all 0.4s; }
     .Button-on-light-bg:hover {
       transform: translateY(1px);
@@ -143,10 +150,36 @@ button:focus {
       box-shadow: inset; }
 
 .ContactForm {
-  width: 60%;
-  height: 440px;
-  background: #6fcf97;
-  margin-bottom: 20rem; }
+  margin-top: 6rem;
+  margin-right: auto;
+  margin-bottom: 18rem;
+  margin-left: auto;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  background-image: linear-gradient(rgba(111, 207, 151, 0.5), rgba(111, 207, 151, 0.5)), url("../../static/double-bubble-outline.png");
+  border: 1px solid #6fcf97; }
+  .ContactForm__col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%; }
+  .ContactForm__col2 {
+    align-self: flex-start;
+    width: 60%; }
+  .ContactForm button {
+    -webkit-text-fill-color: white; }
+
+.MuiFormControl-root.MuiTextField-root {
+  margin-top: 0; }
+
+.MuiFormHelperText-root,
+.MuiFormHelperText-contained.Mui-error.MuiFormHelperText-marginDense {
+  background: rgba(111, 207, 151, 0.5);
+  margin: 0; }
 
 .ContainerFlex {
   display: flex; }
@@ -434,7 +467,7 @@ button:focus {
 
 .ProjectSection__text {
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   line-height: 24px; }
 

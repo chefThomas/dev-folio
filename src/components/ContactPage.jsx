@@ -6,8 +6,8 @@ import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
   return (
-    <Page className='Page'>
-      <Heading level={2} text='Contact' />
+    <Page styles='flex-h-center'>
+      <Heading level={2} text='Contact' styles='' />
       <ContactForm />
       <Footer />
     </Page>
