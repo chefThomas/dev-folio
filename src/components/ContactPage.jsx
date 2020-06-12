@@ -4,11 +4,11 @@ import Heading from "./Heading";
 import Page from "./Page";
 import ContactForm from "./ContactForm";
 
-const ContactPage = () => {
+const ContactPage = ({ postMessage }) => {
   return (
     <Page styles='flex-h-center'>
       <Heading level={2} text='Contact' styles='' />
-      <ContactForm />
+      <ContactForm postMessage={postMessage} />
       <Footer />
     </Page>
   );

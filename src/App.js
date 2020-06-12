@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import axios from "axios";
 
 import ContactPage from "./components/ContactPage";
 import GlobalNav from "./components/GlobalNav";
@@ -9,8 +10,28 @@ import ProjectsPage from "./components/ProjectsPage";
 import ResumePage from "./components/ResumePage";
 
 // import "../src/stylesheets/css/main.css";
+import { api } from "./config.json";
+
+const postMessage = async (body) => {
+  try {
+    const result = await axios.put(`${api.invokeUrl}/messages`, body);
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    async function fetchMessages() {
+      const result = await axios.get(`${api.invokeUrl}/messages`);
+      setMessages(result);
+    }
+    fetchMessages();
+  }, []);
+
   return (
     <>
       <GlobalNav />
@@ -22,7 +43,11 @@ function App() {
               <Switch location={location}>
                 <Route exact path='/' render={() => <ProjectsPage />} />
                 <Route exact path='/resume' render={() => <ResumePage />} />
-                <Route exact path='/contact' render={() => <ContactPage />} />
+                <Route
+                  exact
+                  path='/contact'
+                  render={() => <ContactPage postMessage={postMessage} />}
+                />
                 <Route path='*' render={() => <ProjectsPage />} />
               </Switch>
             </CSSTransition>

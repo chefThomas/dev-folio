@@ -9,7 +9,7 @@ import { ThemeProvider } from "@material-ui/styles";
 
 import emailValidator from "../helpers/emailValidator";
 
-const ContactForm = () => {
+const ContactForm = ({ postMessage }) => {
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -29,7 +29,13 @@ const ContactForm = () => {
 
     if (emailValid) {
       console.log("valid entries");
-      // POST to new user endpoint
+      const body = {
+        name,
+        company,
+        email,
+        message,
+      };
+      postMessage(body);
     } else {
       if (!emailValid) {
         setEmailError(true);
@@ -49,6 +55,10 @@ const ContactForm = () => {
     setCompany(e.target.value);
   };
 
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
   return (
     // <div className='ContactForm'>
     <form className='ContactForm'>
@@ -65,7 +75,6 @@ const ContactForm = () => {
               label='Name'
               // color='primary'
               error={emailError || null}
-              helperText={emailError ? "Invalid email" : ""}
             />
             <TextField
               style={Styles.form.textfield}
@@ -94,6 +103,7 @@ const ContactForm = () => {
             required
             variant='outlined'
             size='small'
+            onChange={handleMessageChange}
             style={{ ...Styles.form.textfield, width: "100%" }}
             value={message}
             label='Message'
