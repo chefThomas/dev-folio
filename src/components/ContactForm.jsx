@@ -17,7 +17,7 @@ const ContactForm = ({ postMessage }) => {
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     // reset error state
     setEmailError(false);
 
@@ -35,7 +35,8 @@ const ContactForm = ({ postMessage }) => {
         email,
         message,
       };
-      postMessage(body);
+      const result = await postMessage(body);
+      console.log(result);
     } else {
       if (!emailValid) {
         setEmailError(true);

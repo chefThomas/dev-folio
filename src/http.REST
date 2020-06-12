@@ -1,0 +1,27 @@
+POST https://um5o2f7ge6.execute-api.us-west-2.amazonaws.com/test/messages HTTP/1.1
+content-type: application/json
+# access-control-allow-origin: *
+
+
+{
+    "name": "POST  test",
+    "company": "Toyota",
+    "email": "fdlkfj@l.com",
+    "message": "no access control allow origin header from postman"
+}
+
+###
+
+PUT https://um5o2f7ge6.execute-api.us-west-2.amazonaws.com/test/messages HTTP/1.1
+content-type: application/json
+access-control-allow-origin: *
+
+{
+    "name": "PUT test",
+    "company": "Toyota",
+    "email": "fdlkfj@l.com",
+    "message": "PUUUUUUUUUUUUUUT"
+}
+
+
+
