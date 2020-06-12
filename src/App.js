@@ -15,7 +15,10 @@ import { api } from "./config.json";
 const postMessage = async (body) => {
   try {
     const result = await axios.put(`${api.invokeUrl}/messages`, body, {
-      headers: { "Access-Control-Allow-Origin": "*" },
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
     });
     console.log(result);
   } catch (err) {
