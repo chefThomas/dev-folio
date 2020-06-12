@@ -14,11 +14,7 @@ import { api } from "./config.json";
 
 const postMessage = async (body) => {
   try {
-    const result = await axios.put(`${api.invokeUrl}/messages`, body, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const result = await axios.put(`${api.invokeUrl}/messages`, body);
     console.log(result);
   } catch (err) {
     console.log(err);
@@ -36,7 +32,8 @@ function App() {
       setMessages(Items);
     }
     fetchMessages();
-  }, []);
+    console.log(messages);
+  }, [messages]);
 
   return (
     <>
