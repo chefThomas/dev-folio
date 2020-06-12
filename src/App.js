@@ -16,7 +16,6 @@ const postMessage = async (body) => {
   try {
     const result = await axios.put(`${api.invokeUrl}/messages`, body, {
       headers: {
-        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
       },
     });
