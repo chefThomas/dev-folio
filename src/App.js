@@ -31,8 +31,10 @@ function App() {
 
   useEffect(() => {
     async function fetchMessages() {
-      const result = await axios.get(`${api.invokeUrl}/messages`);
-      setMessages(result);
+      const {
+        data: { Items },
+      } = await axios.get(`${api.invokeUrl}/messages`);
+      setMessages(Items);
     }
     fetchMessages();
   }, []);
