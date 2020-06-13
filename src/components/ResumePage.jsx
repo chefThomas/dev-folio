@@ -10,7 +10,7 @@ const ResumePage = () => {
       <div className='Resume-container'>
         <iframe
           title='resume'
-          src='https://noxid-portfolio.s3-us-west-2.amazonaws.com/Resume.pdf'
+          src='https://s3-us-west-2.amazonaws.com/noxidweb.dev/static/media/Resume.pdf'
           width='90%'
           height='800px'
           style={
