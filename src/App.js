@@ -25,10 +25,10 @@ const post = async (urlStub, body) => {
   return result;
 };
 
-const postMessage = async (body) => {
-  console.log(body);
+const postMessage = async (formdata) => {
+  console.log(formdata);
   try {
-    const data = await post(`/messages`, body);
+    const data = await post(`/messages`, formdata);
     console.log(data);
     return data;
   } catch (err) {

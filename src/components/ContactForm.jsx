@@ -43,9 +43,7 @@ const ContactForm = ({ postMessage }) => {
         console.log("successful operation");
       }
     } else {
-      if (!emailValid) {
-        setEmailError(true);
-      }
+      setEmailError(true);
     }
     setLoading(false);
   };
