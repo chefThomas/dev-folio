@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Snackbar from "@material-ui/core/Snackbar";
 
 import Styles from "../mui-style-override/styles";
 
@@ -17,19 +18,29 @@ const ContactForm = ({ postMessage }) => {
   const [name, setName] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [message, setMessage] = useState("");
-  const [messageError, setMessageError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [messageError, setMessageError] = useState("");
+
+  const [snackbar, setSnackbar] = useState({
+    visible: false,
+    vertical: "bottom",
+    horizontal: "center",
+    feedback: "what up",
+  });
+
+  const { vertical, horizontal } = snackbar;
+
+  const handleClose = () => {
+    setSnackbar({ ...snackbar, visible: false });
+  };
 
   const handleSubmit = async () => {
+    // loading icon
     setLoading(true);
-    // reset error state
-    setEmailError(false);
 
     // validate email
     const emailValid = emailValidator.test(email);
-    // validate password
 
-    //validate password match
     if (emailValid) {
       const body = {
         name,
@@ -37,13 +48,23 @@ const ContactForm = ({ postMessage }) => {
         email,
         message,
       };
+
       const result = await postMessage(body);
       setLoading(false);
       if (result.status === 201) {
-        console.log("successful operation");
+        setSnackbar({
+          ...snackbar,
+          visible: true,
+          feedback: "Message sent. I will get back to you soon.",
+        });
       }
     } else {
       setEmailError(true);
+      setSnackbar({
+        visible: true,
+        feedback: "Message not sent. Please try again.",
+        ...snackbar,
+      });
     }
     setLoading(false);
   };
@@ -129,6 +150,14 @@ const ContactForm = ({ postMessage }) => {
           {loading ? <CircularProgress size='1.5rem' color='white' /> : "SEND"}
         </Button>
       </div>
+      <Snackbar
+        anchorOrigin={{ vertical, horizontal }}
+        open={snackbar.visible}
+        onClose={handleClose}
+        message={snackbar.feedback}
+        key={vertical + horizontal}
+        autoHideDuration={3000}
+      />
     </form>
   );
 };
