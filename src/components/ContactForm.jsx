@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 import Styles from "../mui-style-override/styles";
 
 import theme from "../mui-style-override/theme";
@@ -16,8 +18,10 @@ const ContactForm = ({ postMessage }) => {
   const [emailError, setEmailError] = useState(false);
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
+    setLoading(true);
     // reset error state
     setEmailError(false);
 
@@ -25,10 +29,8 @@ const ContactForm = ({ postMessage }) => {
     const emailValid = emailValidator.test(email);
     // validate password
 
-    //validate passworids match
-
+    //validate password match
     if (emailValid) {
-      console.log("valid entries");
       const body = {
         name,
         company,
@@ -36,12 +38,16 @@ const ContactForm = ({ postMessage }) => {
         message,
       };
       const result = await postMessage(body);
-      console.log(result);
+      setLoading(false);
+      if (result.status === 201) {
+        console.log("successful operation");
+      }
     } else {
       if (!emailValid) {
         setEmailError(true);
       }
     }
+    setLoading(false);
   };
 
   const handleEmailChange = (e) => {
@@ -122,7 +128,7 @@ const ContactForm = ({ postMessage }) => {
           style={{ ...Styles.button.primary, marginBottom: "2rem" }}
           onClick={handleSubmit}
         >
-          SEND
+          {loading ? <CircularProgress size='1.5rem' color='white' /> : "SEND"}
         </Button>
       </div>
     </form>
