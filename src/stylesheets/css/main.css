@@ -150,6 +150,7 @@ button:focus {
       box-shadow: inset; }
 
 .ContactForm {
+  position: relative;
   margin-top: 6rem;
   margin-right: auto;
   margin-bottom: 18rem;
@@ -194,7 +195,6 @@ button:focus {
     padding-top: 2rem; }
   .ContactForm button {
     -webkit-text-fill-color: white;
-    margin-bottom: 0;
     vertical-align: middle; }
 
 .MuiFormControl-root.MuiTextField-root {
@@ -207,6 +207,27 @@ button:focus {
 .MuiFormHelperText-contained.Mui-error.MuiFormHelperText-marginDense {
   background: rgba(111, 207, 151, 0.5);
   margin: 0; }
+
+.ContactForm__footer {
+  margin-left: auto;
+  color: #d86613;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -8px;
+  right: 0; }
+  .ContactForm__footer-text {
+    margin-right: 0.5rem;
+    font-size: 0.8rem; }
+  .ContactForm__footer-icons {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-size: 100% 100%; }
+  .ContactForm__footer .lambda {
+    background-image: url("../../static/AWS-Lambda_light-bg.png"); }
 
 .ContainerFlex {
   display: flex; }

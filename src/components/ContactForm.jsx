@@ -11,6 +11,7 @@ import theme from "../mui-style-override/theme";
 import { ThemeProvider } from "@material-ui/styles";
 
 import emailValidator from "../helpers/emailValidator";
+import aws from "../static/AWS-Lambda_light-bg.png";
 
 const ContactForm = ({ postMessage }) => {
   const [company, setCompany] = useState("");
@@ -144,7 +145,7 @@ const ContactForm = ({ postMessage }) => {
 
       <div className='ContactForm__button-container'>
         <Button
-          style={{ ...Styles.button.primary, marginBottom: "2rem" }}
+          style={{ ...Styles.button.primary, marginBottom: "4rem" }}
           onClick={handleSubmit}
         >
           {loading ? <CircularProgress size='1.5rem' color='white' /> : "SEND"}
@@ -158,6 +159,10 @@ const ContactForm = ({ postMessage }) => {
         key={vertical + horizontal}
         autoHideDuration={3000}
       />
+      <div className='ContactForm__footer'>
+        <span className='ContactForm__footer-text'>Powered by AWS Lambda</span>
+        <div className='ContactForm__footer-icons lambda'></div>
+      </div>
     </form>
   );
 };

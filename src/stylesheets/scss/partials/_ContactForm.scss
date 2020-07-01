@@ -1,4 +1,5 @@
 .ContactForm {
+  position: relative;
   @include mar(6rem, auto, 18rem, auto);
   width: 75%;
   max-width: 750px;
@@ -57,7 +58,6 @@
 
   & button {
     -webkit-text-fill-color: white;
-    margin-bottom: 0;
     vertical-align: middle;
   }
 }
@@ -73,4 +73,40 @@
 .MuiFormHelperText-contained.Mui-error.MuiFormHelperText-marginDense {
   background: rgba(111, 207, 151, 0.5);
   margin: 0;
+}
+
+.ContactForm__footer {
+  // border: 1px solid red;
+  margin-left: auto;
+  color: #d86613;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+
+  &-text {
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+  }
+  &-icons {
+    width: 2rem;
+    height: 2rem;
+    // margin-left: auto;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-size: 100% 100%;
+  }
+  .lambda {
+    background-image: url("../../static/AWS-Lambda_light-bg.png");
+  }
+
+  // .api {
+  //   background-image: url("../../static/lambda.png");
+  // }
+
+  // .dynamo {
+  //   background-image: url("../../static/dynamo-db.png");
+  // }
 }
