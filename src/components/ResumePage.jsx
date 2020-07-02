@@ -8,7 +8,9 @@ const ResumePage = () => {
     <Page className='ResumePage'>
       <Heading level={2} text='Resume' />
       <div className='Resume-container'>
-        <iframe
+      <iframe title="tom dixon resume"scrolling='no'frameBorder="0"src="https://resume.creddle.io/embed/i66hhdu2fjh"
+  width="850" height="1100" seamless></iframe> 
+        {/* <iframe
           title='resume'
           src='https://s3-us-west-2.amazonaws.com/noxidwebdev.com/static/media/tom-dixon-resume.pdf'
           width='90%'
@@ -18,7 +20,7 @@ const ResumePage = () => {
               // marginBottom: "12rem",
             }
           }
-        ></iframe>
+        ></iframe> */}
       </div>
 
       <Footer />

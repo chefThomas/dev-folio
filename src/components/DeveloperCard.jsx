@@ -23,7 +23,7 @@ const DeveloperCard = ({ setSnackbar }) => {
               fontWeight: "bold",
             }}
           >
-            are you hiring?
+            hiring?
           </span>
           {/* <i class='em em-eyes' aria-role='presentation' aria-label='EYES'></i> */}
         </p>
