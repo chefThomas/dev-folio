@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+// import MinimizeIcon from "@material-ui/icons/Minimize";
 import { NavLink } from "react-router-dom";
 
 import clipboard from "../static/icons8-copy-to-clipboard-16.png";
 
 const DeveloperCard = ({ setSnackbar }) => {
+  // const [state, setState] = useState({ comm: true });
+
   const copyToClipboard = () => {
     navigator.clipboard.writeText("noxidwebdev@gmail.com");
     setSnackbar({
@@ -13,6 +16,7 @@ const DeveloperCard = ({ setSnackbar }) => {
   };
   return (
     <div className='DeveloperCard'>
+      {/* <MinimizeIcon className='DeveloperCard__minimize-icon' color='primary' /> */}
       <div className='DeveloperCard__text'>
         <p className='DeveloperCard__text-head'>
           <span
@@ -23,7 +27,7 @@ const DeveloperCard = ({ setSnackbar }) => {
               fontWeight: "bold",
             }}
           >
-            are you hiring?
+            Want to chat?
           </span>
           {/* <i class='em em-eyes' aria-role='presentation' aria-label='EYES'></i> */}
         </p>
@@ -41,9 +45,8 @@ const DeveloperCard = ({ setSnackbar }) => {
           </span>
           &nbsp; or send a message through the{" "}
           <NavLink className='devcard-nav' exact to='/contact'>
-            contact form
+            contact form.
           </NavLink>{" "}
-          if you'd like to chat.
         </p>
       </div>
     </div>

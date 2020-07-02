@@ -276,24 +276,24 @@ button:focus {
   margin-left: auto;
   z-index: 1000;
   border: 4px solid #2f3c4c;
+  box-shadow: 0 0 5px #6fcf97;
   border-radius: 2px;
   background: rgba(66, 71, 112, 0.2);
   opacity: 0.9;
+  transform: scale(0.1);
   transform: skew(8deg) rotate(7deg);
   transition: all 0.2s ease-in-out; }
   .DeveloperCard:hover {
-    transform: scale(1.3) skew(0deg) translateX(-40px);
-    opacity: 1;
-    background: rgba(66, 71, 112, 0.6); }
-  .DeveloperCard--timer {
-    transform: scale(1.3) skew(0deg) translateX(-40px);
-    opacity: 1;
-    background: rgba(66, 71, 112, 0.6); }
+    border: 4px solid rgba(111, 207, 151, 0.4);
+    box-shadow: 0 0 5px #2f80ed;
+    transform: scale(1.2) skew(0deg) translateX(-40px);
+    opacity: 0.8;
+    background: rgba(66, 71, 112, 0.6);
+    transition: all 0.2s ease-in-out; }
   @media screen and (max-width: 495px) {
     .DeveloperCard {
       opacity: 0; } }
   .DeveloperCard__text-head {
-    text-transform: uppercase;
     margin-right: 2rem;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.3); }
   .DeveloperCard__text {
@@ -301,6 +301,12 @@ button:focus {
     color: white;
     font-size: calc(13px + 0.16vw);
     line-height: 20px; }
+  .DeveloperCard__minimize-icon {
+    position: absolute;
+    top: 0;
+    right: 5px; }
+    .DeveloperCard__minimize-icon:hover {
+      cursor: pointer; }
 
 .email-link {
   color: #2f80ed; }
@@ -402,7 +408,7 @@ button:focus {
     position: absolute;
     bottom: -10%;
     left: 2px;
-    height: 98%;
+    height: 150%;
     width: 1px;
     box-shadow: -2px 0 3px 1px rgba(0, 0, 0, 0.25); }
   .Page__right-shadow {
