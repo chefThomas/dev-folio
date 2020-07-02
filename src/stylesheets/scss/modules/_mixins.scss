@@ -17,3 +17,22 @@ $xxlg: 2rem;
   margin-bottom: $mb;
   margin-left: $ml;
 }
+
+@mixin dev-card-base {
+  max-width: 430px;
+  max-height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 250px;
+  right: 3%;
+  margin-left: auto;
+  z-index: 1000;
+  border: 4px solid $abyss-blue;
+  box-shadow: 0 0 5px $mint-green;
+  border-radius: 2px;
+  background: rgba(66, 71, 112, 0.2);
+  opacity: 0.9;
+  transform: scale(0.1);
+}
