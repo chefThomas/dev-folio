@@ -43,7 +43,7 @@ const DeveloperCard = ({ setSnackbar }) => {
           <NavLink className='devcard-nav' exact to='/contact'>
             contact form
           </NavLink>{" "}
-          if you'd like to chat.
+          if you'd like to reach out.
         </p>
       </div>
     </div>
