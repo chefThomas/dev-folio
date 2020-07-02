@@ -15,7 +15,6 @@ const NavBar = ({ styles }) => {
       <div className='NavBar--link-container'>
         <NavLink exact className='NavBar--link' to='/resume'>
           <button className='NavBar--link-button-outer'>
-            {" "}
             <div className='NavBar--link-button-inner'></div>
           </button>
           resume
