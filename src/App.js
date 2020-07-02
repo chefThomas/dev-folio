@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
+
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import axios from "axios";
+import Snackbar from "@material-ui/core/Snackbar";
 
 import ContactPage from "./components/ContactPage";
 import GlobalNav from "./components/GlobalNav";
 import Header from "./components/Header";
-import MessagesPage from "./components/MessagesPage";
+// import MessagesPage from "./components/MessagesPage";
 import ProjectsPage from "./components/ProjectsPage";
 import ResumePage from "./components/ResumePage";
 
@@ -37,24 +39,33 @@ const postMessage = async (formdata) => {
 };
 
 function App() {
-  const [messages, setMessages] = useState([]);
+  const [snackbar, setSnackbar] = useState({ open: false, message: "" });
 
-  async function fetchMessages() {
-    const {
-      data: { Items },
-    } = await axios.get(`${api.invokeUrl}/messages`);
+  // GET messages from API implement here
+  // async function fetchMessages() {
+  //   const {
+  //     data: { Items },
+  //   } = await axios.get(`${api.invokeUrl}/messages`);
 
-    setMessages(Items);
-  }
+  //   setMessages(Items);
+  // }
 
-  useEffect(() => {
-    fetchMessages();
-  }, []);
+  // useEffect(() => {
+  //   fetchMessages();
+  // }, []);
 
   return (
     <>
       <GlobalNav />
-      <Header styles='margin-lg-bottom' />
+      <Header setSnackbar={setSnackbar} styles='margin-lg-bottom' />
+      <Snackbar
+        // style={{ fonstSize: "0.3rem" }}
+        autoHideDuration={3000}
+        open={snackbar.visible}
+        onClose={() => setSnackbar({ open: false })}
+        message={snackbar.message}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      />
       <Route
         render={({ location }) => (
           <TransitionGroup>
@@ -67,11 +78,11 @@ function App() {
                   path='/contact'
                   render={() => <ContactPage postMessage={postMessage} />}
                 />
-                <Route
+                {/* <Route
                   exact
                   path='/messages'
                   render={() => <MessagesPage messages={messages} />}
-                />
+                /> */}
                 <Route path='*' render={() => <ProjectsPage />} />
               </Switch>
             </CSSTransition>

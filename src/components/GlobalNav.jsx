@@ -8,7 +8,7 @@ import mountains from "../static/mountains-icon-business.png";
 
 import "../stylesheets/css/main.css";
 
-const GlobalNav = (prop) => {
+const GlobalNav = (props) => {
   return (
     <div className='GlobalNav '>
       <ContainerFlex

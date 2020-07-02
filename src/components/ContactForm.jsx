@@ -11,7 +11,6 @@ import theme from "../mui-style-override/theme";
 import { ThemeProvider } from "@material-ui/styles";
 
 import emailValidator from "../helpers/emailValidator";
-import aws from "../static/AWS-Lambda_light-bg.png";
 
 const ContactForm = ({ postMessage }) => {
   const [company, setCompany] = useState("");
