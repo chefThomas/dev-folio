@@ -41,19 +41,6 @@ const postMessage = async (formdata) => {
 function App() {
   const [snackbar, setSnackbar] = useState({ open: false, message: "" });
 
-  // GET messages from API implement here
-  // async function fetchMessages() {
-  //   const {
-  //     data: { Items },
-  //   } = await axios.get(`${api.invokeUrl}/messages`);
-
-  //   setMessages(Items);
-  // }
-
-  // useEffect(() => {
-  //   fetchMessages();
-  // }, []);
-
   return (
     <>
       <GlobalNav />
@@ -64,7 +51,7 @@ function App() {
         open={snackbar.visible}
         onClose={() => setSnackbar({ open: false })}
         message={snackbar.message}
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       />
       <Route
         render={({ location }) => (
