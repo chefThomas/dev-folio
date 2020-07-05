@@ -1,1 +1,1 @@
-[Live site](https://chefthomas.github.io/dev-folio/)
+[Live site](https://noxidwebdev.com)
