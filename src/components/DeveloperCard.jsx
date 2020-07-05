@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-// import MinimizeIcon from "@material-ui/icons/Minimize";
+import React from "react";
+
 import { NavLink } from "react-router-dom";
 
 import clipboard from "../static/icons8-copy-to-clipboard-16.png";
 
 const DeveloperCard = ({ setSnackbar }) => {
-  // const [state, setState] = useState({ comm: true });
-
   const copyToClipboard = () => {
     navigator.clipboard.writeText("noxidwebdev@gmail.com");
     setSnackbar({
@@ -16,7 +14,6 @@ const DeveloperCard = ({ setSnackbar }) => {
   };
   return (
     <div className='DeveloperCard'>
-      {/* <MinimizeIcon className='DeveloperCard__minimize-icon' color='primary' /> */}
       <div className='DeveloperCard__text'>
         <p className='DeveloperCard__text-head'>
           <span
@@ -29,10 +26,7 @@ const DeveloperCard = ({ setSnackbar }) => {
           >
             Want to chat?
           </span>
-          {/* <i class='em em-eyes' aria-role='presentation' aria-label='EYES'></i> */}
         </p>
-        {/* 
-        <br></br> */}
         <p>
           Email me at{" "}
           <span className='email-link' onClick={copyToClipboard}>
